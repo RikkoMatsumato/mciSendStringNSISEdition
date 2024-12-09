@@ -1,0 +1,2 @@
+# mciSendStringNSISEdition
+mciSendStringNSISEdition by RikkoMatsumato
