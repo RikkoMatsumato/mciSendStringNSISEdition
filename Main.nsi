@@ -12,13 +12,13 @@ Name "SFMLNSIS-UnicodeSupEdition"
 BrandingText "SFMLNSIS"
 ReserveFile "${NSISDIR}\Plugins\x86-unicode\System.dll"
 ReserveFile "F:\NSISInclude\UnicodeSupport\SFMLNSIS.dll"
-ReserveFile "ReonaGG.mp3"
+ReserveFile "Example.mp3"
 
 Function .onInit
     InitPluginsDir
     File /oname=$PLUGINSDIR\ReonaGG.mp3 "ReonaGG.mp3"
     StrCpy $0 "$PLUGINSDIR\ReonaGG.mp3"
-    System::Call 'winmm::mciSendStringW(t "play ${NSISDIR}\ReonaGG.mp3 repeat", i 0, i 0, i 0) i .r1'
+    System::Call 'winmm::mciSendStringW(t "play ${NSISDIR}\Example.mp3 repeat", i 0, i 0, i 0) i .r1'
 FunctionEnd
 Section 01
     SetOutPath "C:\SFMLNSISRelease"
