@@ -16,8 +16,6 @@ ReserveFile "Example.mp3"
 
 Function .onInit
     InitPluginsDir
-    File /oname=$PLUGINSDIR\ReonaGG.mp3 "ReonaGG.mp3"
-    StrCpy $0 "$PLUGINSDIR\ReonaGG.mp3"
     System::Call 'winmm::mciSendStringW(t "play ${NSISDIR}\Example.mp3 repeat", i 0, i 0, i 0) i .r1'
 FunctionEnd
 Section 01
